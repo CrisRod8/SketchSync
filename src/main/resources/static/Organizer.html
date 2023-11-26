@@ -9,9 +9,9 @@
     <script src="/webjars/stomp-websocket/stomp.min.js"></script>
     <link rel="stylesheet" href="CSS/Organizer.css">
 
-    <title>Sketchsync</title>
+    <title>Sketchsync!!!</title>
 
-    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="CSS/inicio.css">
     <script src="JS/app.js"></script>
     <script src="JS/apiclient.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -20,26 +20,13 @@
 </head>
 <body onload="app.getUsers()">
 <div class="container">
+
     <div class="abs-center">
-        <a href="https://imgbb.com/">
-            <img src="https://i.ibb.co/my4L0f3/sketchsync1.png" alt="sketchsync1" border="0" width="300" height="120">
-        </a>
+        <img src="../images/sketchsync.png" width="200" height="110">
     </div>
+
 </div>
-
 <div class="canva-center">
-    <div id="body-part">
-        <table id="participantesTable">
-            <thead>
-            <tr>
-                <h1 class="concss"> participantes </h1>
-            </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
-    </div>
-
     <br>
 
     <div class="ask">
@@ -47,41 +34,50 @@
             <div class="form-floating mb-3">
                 <input type="email" class="form-control" id="pregunta" placeholder="name@example.com">
                 <label for="pregunta">Digitar pregunta</label>
+                <button class="btn btn-outline-success" type="button" onclick="app.publicarPregunta()">Publicar pregunta</button>
             </div>
-
-            <div class="d-grid gap-2">
-                <button class="btn btn-success" type="button" onclick="app.publicarPregunta()">Publicar pregunta</button>
-            </div>
-        </div>
-
-        <!-- Button trigger modal -->
-        <div class="d-grid gap-2">
-            <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Publicar Pista
             </button>
-        </div>
-    </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Digitar clue a mostrar</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInputPista" placeholder="name@example.com">
-                    <label for="floatingInputPista">Digitar pista</label>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Salir</button>
-                    <button class="btn btn-primary" onclick="app.guardarPista()">Publicar</button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Digitar pista a mostrar</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInputPista" placeholder="name@example.com">
+                            <label for="floatingInputPista">Digitar pista</label>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+                            <button class="btn btn-primary" onclick="app.guardarPista()">Publicar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
+    <br>
+
+
+    <div id="body-part">
+        <table id="participantesTable">
+            <thead>
+            <tr>
+                <h1 class="concss"> PARTICIPANTES </h1>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
 </div>
 </body>
-
 </html>
