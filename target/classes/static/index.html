@@ -8,8 +8,9 @@
     <script src="/webjars/sockjs-client/sockjs.min.js"></script>
     <script src="/webjars/stomp-websocket/stomp.min.js"></script>
 
-    <title>SketchSync</title>
-    <link rel="stylesheet" href="../CSS/generaly.css">
+    <title>Sketchsync!!!</title>
+
+    <link rel="stylesheet" href="CSS/inicio.css">
     <script src="JS/app.js"></script>
     <script src="JS/apiclient.js"></script>
     <script src="JS/controlUsers.js"></script>
@@ -19,25 +20,30 @@
     <script type="text/javascript" src="https://alcdn.msauth.net/lib/1.3.0/js/msal.js"></script>
 
 </head>
+
 <body>
-<main>
-    <!--Cajas traceras del css-->
-    <div class="contenedor__todo">
-        <div class="box_back">
-            <div class="box_back_log">
-            </div>
-            <div class="box_back_reg">
-                <img src="../images/sketchsync.png" alt="Logotipo de la empresa" width="300" height="200" class="custom-image">
-            </div>
-        </div>
-        <!--Formularo de login y registro-->
-        <div class="loggin-register">
-            <h1></h1>
-            <button onclick="signIn()" type="button" class="btn btn-outline-secondary btn-lg custom-button" data-bs-toggle="modal" data-bs-target="#masterModal">
-                Login
-            </button>
-        </div>
+<div class="container">
+    <div class="abs-center">
+        <img src="../images/sketchsync.png" width="500" height="380">
     </div>
-</main>
+
+</div>
+
+<div class="abs-center">
+
+
+    <div class="d-grid gap-2">
+        <label style="text-align: center">Dependiendo de la cuenta que use</label>
+        <label style="text-align: center">se le dirigirá a una sesión u otra</label>
+
+        <button onclick="signIn()" type="button" class="btn btn-outline-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#masterModal">
+            Login
+        </button>
+        <br><br>
+    </div>
+</div>
+
 </body>
+
+
 </html>
