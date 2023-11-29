@@ -4,9 +4,7 @@ import java.util.ArrayList;
 
 public class User {
 
-    private String name;
-    private ArrayList<Point> points = new ArrayList<>();
-    private boolean isGanador = false;
+
 
     public User(String name, ArrayList<Point> points){
         this.name = name;

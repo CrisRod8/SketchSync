@@ -5,7 +5,7 @@ public class Clue {
     private String contenido;
     private boolean tomada;
 
-    /*Crea la lista*/
+    /*Crea pista*/
     public Clue(){}
 
     public Clue(String contenido, boolean tomada){
